@@ -1,0 +1,6 @@
+{
+  "name": "The Grand Circus CVC Fairground",
+  "description": "An interactive phonics blending fairground for primary ESL learners to practice short vowels (a, e, i, o, u) with a High Striker tower, speech synthesis, and self-checking picture cards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

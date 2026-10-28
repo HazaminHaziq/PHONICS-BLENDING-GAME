@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-fun {
+  font-family: 'Fredoka', cursive, sans-serif;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* 3D tactile button push feel */
+.btn-tactile {
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.btn-tactile:active {
+  transform: translateY(3px);
+}
+
+@keyframes bell-shake {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-18deg) scale(1.15); }
+  40% { transform: rotate(18deg) scale(1.15); }
+  60% { transform: rotate(-12deg); }
+  80% { transform: rotate(12deg); }
+}
+
+.animate-bell {
+  animation: bell-shake 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes mallet-swing {
+  0% { transform: rotate(0deg); }
+  35% { transform: rotate(-45deg); }
+  70% { transform: rotate(25deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-mallet {
+  animation: mallet-swing 0.4s ease-out;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: gentle-float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4)); }
+  50% { filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.8)); }
+}
+
+.animate-carnival-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Authentic Circus Big Top Tent Stripes Background */
+.bg-circus-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #bd1e24 0,
+    #bd1e24 35px,
+    #fdf6e2 35px,
+    #fdf6e2 70px
+  );
+}
+
+.bg-circus-stripes-vertical {
+  background: repeating-linear-gradient(
+    90deg,
+    #b91c1c 0,
+    #b91c1c 45px,
+    #fffbeb 45px,
+    #fffbeb 90px
+  );
+}
+
+/* Rich Circus Fairground Atmosphere Background */
+.bg-circus-fairground {
+  background-color: #2b0b18;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 15% 25%, rgba(220, 38, 38, 0.3) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(217, 119, 6, 0.3) 0%, transparent 45%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(185, 28, 28, 0.12) 0px,
+      rgba(185, 28, 28, 0.12) 40px,
+      rgba(254, 243, 199, 0.08) 40px,
+      rgba(254, 243, 199, 0.08) 80px
+    );
+}
+
+/* Carnival Canopy Awning Scallops */
+.circus-awning-scallop {
+  background-image: radial-gradient(circle at 50% 0%, #b91c1c 65%, transparent 66%);
+  background-size: 32px 16px;
+  background-repeat: repeat-x;
+}
+
+/* Marquee Gold Border Styling */
+.marquee-gold-border {
+  border: 4px solid #f59e0b;
+  box-shadow: 
+    0 0 0 2px #b45309,
+    0 8px 24px -4px rgba(180, 83, 9, 0.4),
+    inset 0 0 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Gentle carnival bunting swing */
+@keyframes bunting-sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.animate-bunting {
+  transform-origin: top center;
+  animation: bunting-sway 4s ease-in-out infinite;
+}
+
